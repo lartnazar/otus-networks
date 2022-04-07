@@ -5,7 +5,8 @@
 ![alt text](./otus-dz-6-topolgy.png "Топология")
 
 1.
-- **R1**
+- Базовая настройка маршрутизатора
+**R1**
 
 ```
 enable
@@ -27,7 +28,8 @@ exit
 copy running-config startup-config
 clock set 21:47:00 04 April 2022 
 ```
-- **S1**
+- Базовая настройка коммутатора
+**S1**
 ```
 enable
 configure terminal
@@ -50,7 +52,8 @@ copy running-config startup-config
 
 ```
 
-- **S2**
+- Базовая настройка коммутатора
+**S2**
 ```
 enable
 configure terminal
@@ -74,7 +77,8 @@ copy running-config startup-config
 ```
 2.
 
- - **S1**
+ - Создание сети VLAN на коммутаторе
+ **S1**
 
 ```
 enable
@@ -95,7 +99,8 @@ switchport mode access
 switchport access vlan 999
 shutdown
 ```
-- **S2**
+- Создание сети VLAN на коммутаторе
+**S2**
 
 ```
 enable
@@ -117,7 +122,8 @@ switchport access vlan 999
 shutdown
 ```
 
-- **S1**
+- Назначение сети VLAN соответствующим интерфейсам коммутатора
+ **S1**
 
 ```
 enable
@@ -133,7 +139,8 @@ exit
 
 ```
 
-- **S2**
+- Назначение сети VLAN соответствующим интерфейсам коммутатора
+**S2**
 
 ```
 enable
@@ -151,7 +158,8 @@ exit
 
 3.
 
-- **S1**
+- Настройка магистрального интерфейса F0/1 на коммутаторе
+**S1**
 
 ```
 enable
@@ -165,7 +173,8 @@ switchport trunk native vlan 1000
 switchport trunk allowed vlan 10,20,30,1000
 
 ```
-- **S2**
+- Настройка магистрального интерфейса F0/1 на коммутаторе
+**S2**
 
 ```
 enable
@@ -180,7 +189,8 @@ switchport trunk allowed vlan 10,20,30,1000
 
 ```
 
-- **S1**
+- Настройка магистрального интерфейса F0/5 на коммутаторе
+**S1**
 
 ```
 enable
@@ -189,11 +199,13 @@ interface f0/5
 switchport mode trunk
 switchport trunk native vlan 1000
 switchport trunk allowed vlan 10,20,30,1000
-
+end
+copy running-config startup-config
 ```
 
 4. 
-- **R1**
+- Настройка маршрутизатора
+ **R1**
 
 ```
 enable
