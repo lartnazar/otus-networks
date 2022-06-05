@@ -2,7 +2,7 @@
 
 ![alt text](./otus-dz-11-topology.png "Топология")
 
-- Базовая настройка маршрутизаторов
+-  Базовая настройка маршрутизаторов
 
 **R1**
 
@@ -379,5 +379,5 @@ exit
 
 ![alt text](./otus-dz-11-cross-ping-acl.png "Ping check")
 
-![alt text](./otus-dz-11-cross-ping-acl.png "SSH check")
+![alt text](./otus-dz-11-ssh-check-acl.png "SSH check")
 
