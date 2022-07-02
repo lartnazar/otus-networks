@@ -345,6 +345,7 @@ configure terminal
 ip access-list extended OPS_OUT
 deny icmp any 10.40.0.0 0.0.0.255
 permit icmp any any
+permit ip any any
 exit
 int g0/0/1.30
 ip access-group OPS_OUT in
@@ -368,7 +369,7 @@ deny tcp 10.40.0.0 0.0.0.255  10.30.0.0 0.0.0.255 eq 443
 deny icmp any 10.20.0.0 0.0.0.255
 deny icmp any 10.30.0.0 0.0.0.255
 permit icmp any any
-permit tcp any any
+permit ip any any
 exit
 int g0/0/1.40
 ip access-group SALES_BLOCK in
